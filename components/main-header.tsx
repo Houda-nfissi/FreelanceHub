@@ -8,7 +8,11 @@ import { Menu } from "lucide-react"
 import { useMobile } from "@/hooks/use-mobile"
 import { usePathname } from "next/navigation"
 
+<<<<<<< HEAD
 export default function MainHeader() {
+=======
+export function MainHeader() {
+>>>>>>> b36a05b (footer done)
   const [isScrolled, setIsScrolled] = useState(false)
   const isMobile = useMobile()
   const pathname = usePathname()

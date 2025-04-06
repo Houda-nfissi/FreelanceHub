@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -98,6 +99,107 @@ export default function Footer() {
               <li>
                 <Link href="/freelancers" className="hover:text-teal-400 transition-colors">
                   Freelances
+=======
+"use client"
+
+import type React from "react"
+
+import Link from "next/link"
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { useToast } from "@/components/ui/use-toast"
+
+export function Footer() {
+  const { toast } = useToast()
+
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    toast({
+      title: "Inscription réussie !",
+      description: "Vous êtes maintenant abonné à notre newsletter.",
+    })
+    // Reset the form
+    const form = e.target as HTMLFormElement
+    form.reset()
+  }
+
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-4">À propos</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="hover:text-teal-400 transition-colors">
+                  Notre plateforme
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="hover:text-teal-400 transition-colors">
+                  Notre équipe
+                </Link>
+              </li>
+              <li>
+                <Link href="/testimonials" className="hover:text-teal-400 transition-colors">
+                  Témoignages
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-teal-400 transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="hover:text-teal-400 transition-colors">
+                  Carrières
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-4">Freelances</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/freelancers" className="hover:text-teal-400 transition-colors">
+                  Trouver un freelance
+                </Link>
+              </li>
+              <li>
+                <Link href="/register/freelancer" className="hover:text-teal-400 transition-colors">
+                  Devenir freelance
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-it-works" className="hover:text-teal-400 transition-colors">
+                  Comment ça marche
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="hover:text-teal-400 transition-colors">
+                  Tarifs
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:text-teal-400 transition-colors">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white text-lg font-semibold mb-4">Entreprises</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/projects" className="hover:text-teal-400 transition-colors">
+                  Projets disponibles
+                </Link>
+              </li>
+              <li>
+                <Link href="/register/company" className="hover:text-teal-400 transition-colors">
+                  Publier un projet
+>>>>>>> b36a05b (footer done)
                 </Link>
               </li>
               <li>
@@ -118,6 +220,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-white">Catégories</h3>
             <ul className="space-y-2">
               <li>
@@ -173,10 +276,45 @@ export default function Footer() {
                   <span className="sr-only">LinkedIn</span>
                 </Link>
               </div>
+=======
+            <h3 className="text-white text-lg font-semibold mb-4">Newsletter</h3>
+            <p className="mb-4">Abonnez-vous pour recevoir les dernières opportunités et actualités.</p>
+            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
+              <div className="flex">
+                <Input
+                  type="email"
+                  placeholder="Votre email"
+                  className="rounded-r-none bg-gray-800 border-gray-700 text-white"
+                  required
+                />
+                <Button type="submit" className="rounded-l-none bg-teal-600 hover:bg-teal-700">
+                  S'abonner
+                </Button>
+              </div>
+            </form>
+            <div className="flex space-x-4 mt-6">
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+>>>>>>> b36a05b (footer done)
             </div>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<<<<<<< HEAD
           <p className="text-sm text-gray-400">© 2025 FreelanceHub. Tous droits réservés.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/terms" className="text-sm text-gray-400 hover:text-teal-400">
@@ -186,6 +324,17 @@ export default function Footer() {
               Politique de confidentialité
             </Link>
             <Link href="/cookies" className="text-sm text-gray-400 hover:text-teal-400">
+=======
+          <p className="text-sm">&copy; {new Date().getFullYear()} TechTalent. Tous droits réservés.</p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/terms" className="text-sm text-gray-400 hover:text-white">
+              Conditions d'utilisation
+            </Link>
+            <Link href="/privacy" className="text-sm text-gray-400 hover:text-white">
+              Politique de confidentialité
+            </Link>
+            <Link href="/cookies" className="text-sm text-gray-400 hover:text-white">
+>>>>>>> b36a05b (footer done)
               Cookies
             </Link>
           </div>

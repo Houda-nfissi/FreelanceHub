@@ -1,4 +1,5 @@
 import type React from "react"
+<<<<<<< HEAD
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -19,6 +20,21 @@ export const metadata = {
     locale: "fr-FR",
     type: "website",
   },
+=======
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { MainHeader } from "@/components/main-header"
+import { Footer } from "@/components/footer"
+import { Toaster } from "@/components/ui/toaster"
+import { CookieConsent } from "@/components/cookie-consent"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "TechTalent - Plateforme de freelance",
+  description: "Trouvez les meilleurs freelances pour vos projets ou trouvez des missions adaptées à vos compétences",
+>>>>>>> b36a05b (footer done)
     generator: 'v0.dev'
 }
 
@@ -28,6 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
+<<<<<<< HEAD
     <html lang="fr" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -36,6 +53,15 @@ export default function RootLayout({
           <Footer />
           <Toaster />
         </ThemeProvider>
+=======
+    <html lang="fr">
+      <body className={inter.className}>
+        <MainHeader />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <Toaster />
+        <CookieConsent />
+>>>>>>> b36a05b (footer done)
       </body>
     </html>
   )

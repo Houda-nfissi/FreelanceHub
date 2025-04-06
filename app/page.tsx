@@ -130,8 +130,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Reste du contenu inchangé... */}
+=======
+>>>>>>> b36a05b (footer done)
     </div>
   )
 }
