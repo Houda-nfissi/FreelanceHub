@@ -89,7 +89,7 @@ export default function CompanyRegisterPage() {
       <div className="container max-w-2xl px-4">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-teal-700">Inscription Entreprise</h1>
-          <p className="text-gray-500 mt-2">Créez votre compte entreprise pour commencer à publier des projets</p>
+          <p className="text-gray-500 mt-2">Créez votre compte entreprise pour commencer à publier vous projets</p>
         </div>
 
         <div className="mb-8">
